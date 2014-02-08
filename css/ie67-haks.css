@@ -1,0 +1,16 @@
+/* FIX: #account causing everything to be shifted below it */
+div#header { margin-top:-26px; }
+div#account { z-index: 100; position: relative; top:26px; }
+
+/* FIX: IE always shows right scrollbar
+ *  change layout to accommodate
+ */
+html, body { height:100%; }
+div#hi-frame { margin:0px auto; width:97%; height:100%; }
+div#hi-frame div#header,
+div#hi-frame iframe {  position:relative; top:0; left:0; right:0; bottom:0; width:100%; }
+div#hi-frame div#header { margin:0; height:10%; }
+div#hi-frame div#header div#account { top:0; }
+div#hi-frame div#header div#logo { height:100%; }
+div#hi-frame iframe { margin:0; height:90%; }
+

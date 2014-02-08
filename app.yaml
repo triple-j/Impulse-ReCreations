@@ -1,0 +1,14 @@
+application: heavyerink
+version: 1
+runtime: php
+api_version: 1
+
+handlers:
+- url: /css
+  static_dir: css
+
+- url: /imgs
+  static_dir: imgs
+
+- url: /.*
+  script: index.php

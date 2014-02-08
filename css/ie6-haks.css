@@ -1,0 +1,28 @@
+/* FIX: links too far left */
+div#account { margin-right:20px; }
+
+/* FIX: hack to fix IE6 not displaying PNG transparency */
+div#logo div a img { display:none; }
+div#logo div a {
+    display: block;
+    width: 285px;
+    height: 47px;
+    margin-top: 27px;
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='webroot/imgs/logo-type.png', sizingMethod='scale');
+    background: transparent;
+    padding:0;
+}
+
+/* FIX: tabs displaying under each other */
+div#menu ul li a { float:left; position:relative; }
+
+/* FIX: elements under 'logo' positioned after end of logo background
+ *  #logo height(122px) - logo-bg.png height(431px) = new margin(-309px)
+ */
+div#menu { margin-top:-309px; }
+div#content-container { margin-top:-309px; padding-top:30px; }
+
+/* FIX: Regular layout messing up hi-frame layout */
+div#hi-frame div#account { margin-right:0px; }
+div#hi-frame div#logo div a { margin:7px 5px 0; }
+div#hi-frame div#menu { margin-top:0; }
