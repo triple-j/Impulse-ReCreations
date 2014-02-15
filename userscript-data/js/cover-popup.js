@@ -64,11 +64,11 @@ $(document).ready(function() {
     if (imgUrl != null) {   // only run if there is a cover image
         // insert cover-popup HTML
         var cvrImg = heri_coverSize(imgUrl, 'l');  // get url for image's large version
-        $('div#main').append('<div id="comic-gn-popup" style="display:none;">');  // contents will be cloned by facebox
+        $('body').append('<div id="comic-gn-popup" style="display:none;">');  // contents will be cloned by facebox
         $('div#comic-gn-popup').append('<div class="popup-covers">');
         $('div#comic-gn-popup div.popup-covers').append('<img class="popup-cover" src="'+cvrImg+'" />');
         $('div#comic-gn-popup div.popup-covers').append('<div class="thumbnails">');
-        $('div.covers div.thumbnails img.cover_image').each(function() {
+        $('.cover_thumbnail_set img.cover_image').each(function() {
             // add each thumbnail if exists
             var thmbImg = heri_coverSize($(this).attr('src'), 't');
             $('div#comic-gn-popup div.thumbnails').append('<img src="'+thmbImg+'" onclick="heri_clickCover(this);" />');
@@ -76,8 +76,8 @@ $(document).ready(function() {
         $('div#comic-gn-popup div.popup-covers').append('<br class="clear">');
 
         // set up mouse events (attach to <img> so we can send 'this' and get the image's source that way)
-        $('div.thumbnails a').removeAttr('onclick');  // remove original page function
-        $('div.covers img.cover_image').click(function () { heri_popupCover(this); });  // applies to cover & nano-thumbs
-        $('div.covers div.thumbnails img.cover_image').mouseover(function () { heri_overCover(this); });
+        //$('div.thumbnails a').removeAttr('onclick');  // remove original page function
+        $('.covers, .cover_thumbnail_set').on('click','img.cover_image',function () { heri_popupCover(this); });  // applies to cover & nano-thumbs
+        $('.cover_thumbnail_set img.cover_image').mouseover(function () { heri_overCover(this); });
     }
 });
