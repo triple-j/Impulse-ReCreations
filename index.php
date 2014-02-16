@@ -15,6 +15,12 @@ if ( $page == '/' || preg_match('|^/index|',$page) ) {
 
 } else {
 
-	echo "hikat2" . $page;
+	$file = "pages/" . preg_replace('/^\/(.*?)(\/|\.php)?$/',"$1",$page) . ".php";
+
+	if ( file_exists($file) ) {
+		include( $file );
+	} else {
+		include( "pages/404.php" );
+	}
 
 }

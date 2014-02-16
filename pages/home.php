@@ -1,8 +1,5 @@
 <?php
-require('includes/prescription/px.php');
-require('includes/prescription/px_template.php');
-PX_Template::set_template_dir( dirname(dirname(__FILE__))."/templates/" );
-
+require('includes/app_top.php');
 
 ob_start();
 $selected = "Home";
@@ -35,9 +32,8 @@ ob_start();
 $tmpl_body = ob_get_clean();
 
 
-PX_Template::set_template("default");
 PX_Template::set_region('title', "a third-party add-on website to HeavyInk");
-PX_Template::set_region('head', '<link rel="stylesheet" type="text/css" href="css/main.css" />');
+#PX_Template::set_region('head', '<link rel="stylesheet" type="text/css" href="css/main.css" />');
 PX_Template::set_region('tabs_ul_nav', $tmpl_nav);
 PX_Template::set_region('body', $tmpl_body);
 PX_Template::out();
