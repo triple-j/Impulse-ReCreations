@@ -43,7 +43,7 @@
 			<div id="menu" class="nav">
 				<div class="nav tabs">
 
-					(px:region name="tabs_ul_nav" /)
+<?php include('includes/tabs.php'); ?>
 
 				</div>
 			</div>

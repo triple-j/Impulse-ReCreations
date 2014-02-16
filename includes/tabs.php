@@ -11,7 +11,7 @@ $tabs = array(
 <?php
 foreach ($tabs as $tab):
 	$class="";
-	if (isset($selected) && $selected == $tab['label']) {
+	if (isset($heri_selected_tab) && $heri_selected_tab == $tab['label']) {
 		$class = " class=\"selected\" ";
 	}
 ?>

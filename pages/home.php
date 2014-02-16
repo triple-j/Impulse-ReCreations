@@ -1,10 +1,7 @@
 <?php
 require('includes/app_top.php');
 
-ob_start();
-$selected = "Home";
-include('includes/tabs.php');
-$tmpl_nav = ob_get_clean();
+$heri_selected_tab = "Home";
 
 ob_start();
 ?>
@@ -33,7 +30,5 @@ $tmpl_body = ob_get_clean();
 
 
 PX_Template::set_region('title', "a third-party add-on website to HeavyInk");
-#PX_Template::set_region('head', '<link rel="stylesheet" type="text/css" href="css/main.css" />');
-PX_Template::set_region('tabs_ul_nav', $tmpl_nav);
 PX_Template::set_region('body', $tmpl_body);
 PX_Template::out();
