@@ -12,7 +12,7 @@ $filecontents = file_get_contents('userscript-data/js/'.$filename);
 $minifiedJs = $use_plus ? JSMinPlus::minify($filecontents) : JSMin::minify($filecontents);
 $minifiedJs = str_replace("\n","",$minifiedJs);
 
-header('Content-type: application/json; charset=utf-8');
+header('Content-type: text/javascript; charset=utf-8');
 
 echo $minifiedJs;
 
