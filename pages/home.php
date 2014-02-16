@@ -7,7 +7,7 @@ ob_start();
 ?>
 
 	<h1>Heavy<em>er</em> Ink <sup><small style="color:black">alpha</small></sup></h1>
-	<p>Install the <a href="gm/heavyerink.user.js">User Script</a> to get the most out of <b>Heavy Ink</b>.
+	<p>Install the <a href="heavyerink.user.js">User Script</a> to get the most out of <b>Heavy Ink</b>.
 		<br/><sup><small style="padding-left:1em;">(Current version: <?=HERI_VERSION;?>)</small></sup></p>
 	<p><small>Tested on Chrome and Firefox (Firefox requires
 		<a href="http://www.greasespot.net/" target="_blank">Greasemonkey</a>).</p>
