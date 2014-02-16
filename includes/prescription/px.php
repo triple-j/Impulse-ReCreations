@@ -259,7 +259,7 @@
 				error_log('Could not find file "'.$file.'"');
 			}
 
-			extract($GLOBALS);
+			extract($GLOBALS, EXTR_SKIP);
 
 			ob_start();
 			include($file);
