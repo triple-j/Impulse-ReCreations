@@ -2,20 +2,20 @@
 error_reporting(E_ALL ^ E_NOTICE);
 ini_set("display_errors", 1);
 
-$page = $_SERVER['REQUEST_URI'];
+$heri_page = $_SERVER['REQUEST_URI'];
 
 
-if ( $page == '/' || preg_match('|^/index|',$page) ) {
+if ( $heri_page == '/' || preg_match('|^/index|',$heri_page) ) {
 
 	include( "pages/home.php" );
 
-} else if ( preg_match('|^/js/|',$page) )  {
+} else if ( preg_match('|^/js/|',$heri_page) )  {
 
 	include( "pages/jsmin.php" );
 
 } else {
 
-	$file = "pages/" . preg_replace('/^\/(.*?)(\/|\.php)?$/',"$1",$page) . ".php";
+	$file = "pages/" . preg_replace('/^\/(.*?)(\/|\.php)?$/',"$1",$heri_page) . ".php";
 
 	if ( file_exists($file) ) {
 		include( $file );
