@@ -259,6 +259,8 @@
 				error_log('Could not find file "'.$file.'"');
 			}
 
+			extract($GLOBALS);
+
 			ob_start();
 			include($file);
 			$html = ob_get_clean();
