@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension>
+	<name>Extension Test</name>
+	<description>
+		This is a test of the experimental extension system of HeavyerInk.
+	</description>
+	<stylesheet>test.css</stylesheet>
+	<!--stylesheet>test2.css</stylesheet-->
+	<javascript>test.js</javascript>
+</extension>

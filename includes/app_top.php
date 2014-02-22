@@ -5,4 +5,6 @@ require('includes/prescription/px_template.php');
 PX_Template::set_template_dir( dirname(dirname(__FILE__))."/templates/" );
 PX_Template::set_template("default");
 
-define('HERI_VERSION', "0.2.0a");
+define('HERI_VERSION', "0.2.1a");
+
+define('DIR_EXTENSIONS', "extensions/");
