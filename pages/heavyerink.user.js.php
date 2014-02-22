@@ -4,7 +4,7 @@ ini_set("display_errors", 0);
 
 #echo "boo".time();
 
-$extensions = array('test');
+$extensions = array( "test", "cover-popup" );
 $extensions_data = array();
 
 foreach ( $extensions as $extension ) {
