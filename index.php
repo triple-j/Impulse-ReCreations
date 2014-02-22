@@ -9,9 +9,13 @@ if ( $heri_page == '/' || preg_match('|^/index|',$heri_page) ) {
 
 	include( "pages/home.php" );
 
-} else if ( preg_match('|^/js/|',$heri_page) )  {
+} else if ( preg_match('|^/minjs/|',$heri_page) )  {
 
 	include( "pages/jsmin.php" );
+
+} else if ( preg_match('|^/mincss/|',$heri_page) )  {
+
+	include( "pages/cssmin.php" );
 
 } else {
 
