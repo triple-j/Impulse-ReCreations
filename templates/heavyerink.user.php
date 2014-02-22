@@ -43,7 +43,7 @@ elm_style.setAttribute('title', "heri");
 if ( elm_style.styleSheet ) {
 	elm_style.styleSheet.cssText = text_style;
 } else {
-	elm_style.appendChild(document.createTextNode( "b,strong,h1 {color:red;}" + text_style ));
+	elm_style.appendChild(document.createTextNode( text_style ));
 }
 elm_head.appendChild(elm_style);
 
