@@ -6,4 +6,4 @@ img.cover_image { cursor:pointer; }
 div.popup-covers { width:420px; text-align:center; }
 div.popup-covers img { margin:5px; }
 div.popup-covers div.popup-cover { /*float:left;*/ }
-div.popup-covers div.thumbnails { float:left; width:80px; }
+div.popup-covers div.thumbnails { float:left; width:80px; margin-left:0px }
