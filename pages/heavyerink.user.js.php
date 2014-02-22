@@ -1,8 +1,9 @@
 <?php
 require('includes/app_top.php');
-ini_set("display_errors", 0);
+include('includes/minify/CSSmin.php');
+include('includes/minify/JSMin.php');
 
-#echo "boo".time();
+$cssmin = new CSSmin();
 
 $extensions = array( "cover-popup" );
 $extensions_data = array();
@@ -12,10 +13,7 @@ foreach ( $extensions as $extension ) {
 	$xmlfile = $ext_dir."extension.xml";
 
 	if ( file_exists($xmlfile) ) {
-		#echo $xmlfile;
-
 		$xml = simplexml_load_file( $xmlfile );
-		#var_dump($xml);
 
 		$css_count = $xml->stylesheet->count();
 		$js_count  = $xml->javascript->count();
@@ -29,7 +27,8 @@ foreach ( $extensions as $extension ) {
 				$cssfile = $ext_dir . $stylesheet;
 				if ( file_exists($cssfile) ) {
 					$filecontents = file_get_contents( $cssfile );
-					$extensions_data['styles'] []= $filecontents;
+					$minifiedCss = $cssmin->run( $filecontents );
+					$extensions_data['styles'] []= $minifiedCss;
 				}
 			}
 		}
@@ -43,7 +42,8 @@ foreach ( $extensions as $extension ) {
 				$jsfile = $ext_dir . $javascript;
 				if ( file_exists($jsfile) ) {
 					$filecontents = file_get_contents( $jsfile );
-					$extensions_data['scripts'] []= $filecontents;
+					$minifiedJs = str_replace( "\n", "", JSMin::minify($filecontents) );
+					$extensions_data['scripts'] []= $minifiedJs;
 				}
 			}
 		}
@@ -63,4 +63,4 @@ PX_Template::set_template("heavyerink.user");
 
 PX_Template::set_region('version', HERI_VERSION." (".time().")");
 PX_Template::set_region('extension_json', json_encode($extensions_data));
-PX_Template::out();
+@PX_Template::out();
