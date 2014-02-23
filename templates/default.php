@@ -3,6 +3,7 @@
 
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<base href="/">
 
 		<title>(px:region name="title" /) - HeavyerInk</title>
 		<link rel="shortcut icon" href="favicon.ico" />
@@ -17,8 +18,7 @@
 		<![endif]-->
 
 		<!-- JAVASCRIPT LINKS -->
-		<!--script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script-->
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
 
 		<link rel="stylesheet" type="text/css" href="css/main.css" />
 

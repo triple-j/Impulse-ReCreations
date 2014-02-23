@@ -10,7 +10,7 @@ ob_start();
 	<p>Install the <a href="heavyerink.user.js">User Script</a> to get the most out of <b>HeavyInk</b>.
 		<br/><sup><small style="padding-left:1em;">(Current version: <?=HERI_VERSION;?>)</small></sup></p>
 	<p><small>Tested on Chrome and Firefox (Firefox requires
-		<a href="http://www.greasespot.net/" target="_blank">Greasemonkey</a>).</p>
+		<a href="http://www.greasespot.net/" target="_blank">Greasemonkey</a>).</small></p>
 
 	<div class="features">
 		<h2>Features</h2>

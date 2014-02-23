@@ -10,12 +10,12 @@ $tabs = array(
 		<ul>
 <?php
 foreach ($tabs as $tab):
-	$class="";
-	if (isset($heri_selected_tab) && $heri_selected_tab == $tab['label']) {
-		$class = " class=\"selected\" ";
-	}
+	$class  = (isset($heri_selected_tab) && $heri_selected_tab == $tab['label'])
+		? "class=\"selected\"" : "";
+	$target = ( substr($tab['url'],0,4) == "http" )
+		? "target=\"_blank\"" : "";
 ?>
-			<li<?=$class;?>><a href="<?=$tab['url'];?>"><?=$tab['label'];?></a></li>
+			<li <?=$class;?>><a href="<?=$tab['url'];?>" <?=$target;?>><?=$tab['label'];?></a></li>
 <?php
 endforeach;
 ?>
