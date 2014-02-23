@@ -11,5 +11,9 @@ handlers:
 - url: /imgs
   static_dir: imgs
 
+- url: /favicon.ico
+  static_files: favicon.ico
+  upload: favicon.ico
+
 - url: /.*
   script: index.php
