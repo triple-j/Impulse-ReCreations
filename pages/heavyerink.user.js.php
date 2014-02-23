@@ -5,7 +5,7 @@ include('includes/minify/JSMin.php');
 
 $cssmin = new CSSmin();
 
-$extensions = array( "common", "cover-popup", "close-coupon" );
+$extensions = array( "common", "cover-popup", "close-coupon", "login-dialog" );
 $extensions_data = array();
 
 foreach ( $extensions as $extension ) {

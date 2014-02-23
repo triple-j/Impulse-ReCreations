@@ -5,4 +5,5 @@
 		This is a shared set of functions that can be used with other extensions.
 	</description>
 	<javascript>functions.js</javascript>
+	<javascript>init.js</javascript>
 </extension>
