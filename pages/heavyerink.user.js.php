@@ -13,7 +13,8 @@ foreach ( $extensions as $extension ) {
 	$xmlfile = $ext_dir."extension.xml";
 
 	if ( file_exists($xmlfile) ) {
-		$xml = simplexml_load_file( $xmlfile );
+		$xmlcontents = file_get_contents( $xmlfile );
+		$xml = new SimpleXMLElement( $xmlcontents );
 
 		$css_count = $xml->stylesheet->count();
 		$js_count  = $xml->javascript->count();
