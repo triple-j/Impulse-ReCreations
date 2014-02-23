@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension>
+	<name>Extension Skeleton</name>
+	<description>
+		<![CDATA[
+		Give your extension a name via the <name> tag.
+
+		Describe you extention here in the <description> tag.
+
+		Multiple <stylesheet> and <javascript> tags can be used, and only one is
+		required.  Place your CSS and Javascript files in the same folder as this
+		extension.
+		]]>
+	</description>
+	<stylesheet>style.css</stylesheet>
+	<javascript>script.js</javascript>
+</extension>
