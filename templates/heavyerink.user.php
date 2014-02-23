@@ -16,6 +16,9 @@ var elm_head = document.getElementsByTagName('head')[0],
     text_style = "", text_script = "",
     elm_style, elm_script, extensions, idx;
 
+// set HeavyerInk Userscript version variable
+text_script += "var heri_version = \"(px:region name="version"/)\";\n";
+
 // code to be added
 extensions = (px:region name="extension_json"/);
 
