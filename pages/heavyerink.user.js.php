@@ -9,7 +9,7 @@ $extensions = array( "cover-popup" );
 $extensions_data = array();
 
 foreach ( $extensions as $extension ) {
-	$ext_dir = DIR_EXTENSIONS.$extension."/";
+	$ext_dir = "file://".$heri_path.DIR_EXTENSIONS.$extension."/";
 	$xmlfile = $ext_dir."extension.xml";
 
 	if ( file_exists($xmlfile) ) {
