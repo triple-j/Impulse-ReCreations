@@ -3,6 +3,7 @@ require('includes/app_top.php');
 
 header("HTTP/1.0 404 Not Found");
 
+$heri_selected_tab = "[ debug ]";
 
 ob_start();
 ?>

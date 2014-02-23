@@ -6,6 +6,9 @@ $tabs = array(
 	array( 'url'=>"https://heavyink.com/forums/1/topics/2655", 'label'=>"Discuss" ),
 	array( 'url'=>"http://heavyink.com/", 'label'=>"HeavyInk" ) /* TODO: add a togle for Heavy/er Ink */
 );
+if ( DEBUG_LVL >= 1 ) {
+	$tabs []= array( 'url'=>"debug", 'label'=>"[ debug ]" );
+}
 ?>
 	<div class="nav tabs">
 		<ul>

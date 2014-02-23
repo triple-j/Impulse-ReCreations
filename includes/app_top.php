@@ -8,3 +8,5 @@ PX_Template::set_template("default");
 define('HERI_VERSION', "0.2.4a");
 
 define('DIR_EXTENSIONS', "extensions/");
+
+define('DEBUG_LVL', ($_SERVER['SERVER_NAME'] == 'localhost')?1:0);
