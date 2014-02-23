@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension>
+	<name>Common Functions</name>
+	<description>
+		This is a shared set of functions that can be used with other extensions.
+	</description>
+	<javascript>functions.js</javascript>
+</extension>

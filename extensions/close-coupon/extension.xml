@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension>
+	<name>Close Coupon Dialog</name>
+	<description>
+		This will automatically close the 'First time customer coupon' dialog.
+	</description>
+	<javascript>close-it.js</javascript>
+</extension>
