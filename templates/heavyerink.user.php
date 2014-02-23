@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name          HeavyerInk
-// @namespace     http://heavyerink.mooo.com
+// @namespace     http://heavyerink.appspot.com/
 // @description   A third party add-on for the web site HeavyInk.com
 // @version       (px:region name="version"/)
 // @include       http://heavyink.com/*

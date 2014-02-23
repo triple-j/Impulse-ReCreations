@@ -1,8 +1,8 @@
 Heavy*er* Ink
 =============
 
-Heavy*er* Ink is a third-party add-on website to
-[HeavyInk](http://heavyink.com).  Users can download a _Userscript_ to add
+[Heavy*er* Ink](http://heavyerink.appspot.com/) is a third-party add-on website
+to [HeavyInk](http://heavyink.com/).  Users can download a _Userscript_ to add
 functionality to _HeavyInk.com_.
 
 
