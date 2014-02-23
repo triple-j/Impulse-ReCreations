@@ -17,6 +17,10 @@ if ( $heri_page == '/' || preg_match('|^/index|',$heri_page) ) {
 
 	include( "pages/cssmin.php" );
 
+} else if ( preg_match('|^/info$|',$heri_page) )  {
+
+	phpinfo();
+
 } else {
 
 	$file = "pages/" . preg_replace('/^\/(.*?)(\/|\.php)?$/',"$1",$heri_page) . ".php";
