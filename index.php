@@ -3,7 +3,6 @@ error_reporting(E_ALL ^ E_NOTICE);
 #ini_set("display_errors", 1);
 
 $heri_page = $_SERVER['REQUEST_URI'];
-$heri_path = dirname(__FILE__).'/';
 
 
 if ( $heri_page == '/' || preg_match('|^/index|',$heri_page) ) {
