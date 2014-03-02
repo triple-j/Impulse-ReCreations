@@ -9,18 +9,21 @@
 		<link rel="shortcut icon" href="favicon.ico" />
 
 		<!-- STYLE SHEET LINKS -->
-		<link rel="stylesheet" type="text/css" href="<?=$opts['root'];?>css/layout.css" />
+		<link rel="stylesheet" type="text/css" href="css/layout.css" />
 		<!--[if IE 6]>
-		<link rel="stylesheet" type="text/css" href="<?=$opts['root'];?>css/ie6-haks.css" />
+		<link rel="stylesheet" type="text/css" href="css/ie6-haks.css" />
 		<![endif]-->
 		<!--[if lte IE 7]>
-		<link rel="stylesheet" type="text/css" href="<?=$opts['root'];?>css/ie67-haks.css" />
+		<link rel="stylesheet" type="text/css" href="css/ie67-haks.css" />
 		<![endif]-->
 
 		<!-- JAVASCRIPT LINKS -->
 		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+		<script type="text/javascript" src="js/facebox.js"></script>
+		<script type="text/javascript" src="js/general.js"></script>
 
 		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<link rel="stylesheet" type="text/css" href="css/facebox.css" />
 
 		(px:region name="head" /)
 

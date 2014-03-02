@@ -2,7 +2,7 @@
 /* Tab Menu */
 $tabs = array(
 	array( 'url'=>"index.php", 'label'=>"Home" ),
-	/*array( 'url'=>"stats.php", 'label'=>"Stats" ),*/
+	array( 'url'=>"customize", 'label'=>"Customize" ),
 	array( 'url'=>"https://heavyink.com/forums/1/topics/2655", 'label'=>"Discuss" ),
 	array( 'url'=>"http://heavyink.com/", 'label'=>"HeavyInk" ) /* TODO: add a togle for Heavy/er Ink */
 );

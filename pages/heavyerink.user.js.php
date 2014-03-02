@@ -3,10 +3,25 @@ require('includes/app_top.php');
 include('includes/minify/CSSmin.php');
 include('includes/minify/JSMin.php');
 
+#if ( isset($_COOKIE['HERI_REQUEST']) ) {
+#	$_REQUEST = json_decode( $_COOKIE['HERI_REQUEST'], true );
+#	#setcookie("HERI_REQUEST", "", time() - 3600); // delete cookie
+#}
+
+if ( isset($_SESSION['HERI_REQUEST']) ) {
+	$_REQUEST = json_decode( $_SESSION['HERI_REQUEST'], true );
+	#unset($_SESSION['HERI_REQUEST']);
+}
+
+
 $cssmin = new CSSmin();
 
-$extensions = array( "common", "cover-popup", "close-coupon", "login-dialog" );
+$extensions = isset($_REQUEST['extensions'])?$_REQUEST['extensions']:$heri_default_extensions;
 $extensions_data = array();
+
+$is_default  = (bool)( identical_values($heri_default_extensions, $extensions) );
+$custom_hash = md5( HERI_VERSION . implode('',$extensions) );
+
 
 foreach ( $extensions as $extension ) {
 	$ext_dir = DIR_EXTENSIONS.$extension."/";
@@ -62,6 +77,7 @@ header('Content-type: text/javascript; charset=utf-8');
 
 PX_Template::set_template("heavyerink.user");
 
-PX_Template::set_region('version', HERI_VERSION." (".time().")");
+PX_Template::set_region('version', HERI_VERSION.($is_default?"":" (".$custom_hash.")"));
 PX_Template::set_region('extension_json', json_encode($extensions_data));
 @PX_Template::out();
+
