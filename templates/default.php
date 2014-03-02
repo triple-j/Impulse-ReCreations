@@ -72,7 +72,8 @@
 		</div>
 		<div id="footer">
 			<small>
-				Heavy<strong>er</strong> Ink is a third-party add-on website to <a href="http://heavyink.com/" target="_blank">HeavyInk.com</a>
+				Heavy<strong>er</strong> Ink is a third-party add-on website.  It is not affiliated
+				with <a href="http://heavyink.com/" target="_blank">HeavyInk.com</a> in any way.
 				<br/>
 				Hacked together by <a href="http://triplejweb.developer.se" target="_blank">Jeremie J. Jarosh</a>
 			</small>

@@ -6,11 +6,13 @@ $heri_selected_tab = "Home";
 ob_start();
 ?>
 
-	<h1>Heavy<em>er</em> Ink <sup><small style="color:black">alpha</small></sup></h1>
+	<h1>Heavy<em>er</em> Ink<sup><small style="color:black">beta</small></sup></h1>
 	<p>Install the <a href="heavyerink.user.js">User Script</a> to get the most out of <b>HeavyInk</b>.
 		<br/><sup><small style="padding-left:1em;">(Current version: <?=HERI_VERSION;?>)</small></sup></p>
 	<p><small>Tested on Chrome and Firefox (Firefox requires
-		<a href="http://www.greasespot.net/" target="_blank">Greasemonkey</a>).</small></p>
+		<a href="http://www.greasespot.net/" target="_blank">Greasemonkey</a>, and
+		<a href="http://tampermonkey.net/" target="_blank">Tampermonkey</a> is recommended for
+		Chrome).</small></p>
 
 	<div class="features">
 		<h2>Features</h2>
@@ -29,6 +31,6 @@ ob_start();
 $tmpl_body = ob_get_clean();
 
 
-PX_Template::set_region('title', "a third-party add-on website to HeavyInk");
+PX_Template::set_region('title', "A Third-Party Userscript for HeavyInk");
 PX_Template::set_region('body', $tmpl_body);
 PX_Template::out();
