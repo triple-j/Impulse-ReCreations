@@ -4,7 +4,7 @@
 	<description>
 		This extension adds a budget calculator to the *Calander* page, as well as other statistic functions.
 	</description>
-	<!--stylesheet>style.css</stylesheet-->
+	<stylesheet>stats.css</stylesheet>
 	<javascript>data.js</javascript>
 	<javascript>stats.js</javascript>
 </extension>
