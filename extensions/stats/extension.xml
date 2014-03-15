@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension>
+	<name>Statistics</name>
+	<description>
+		This extension adds a budget calculator to the *Calander* page, as well as other statistic functions.
+	</description>
+	<!--stylesheet>style.css</stylesheet-->
+	<javascript>data.js</javascript>
+	<javascript>stats.js</javascript>
+</extension>
