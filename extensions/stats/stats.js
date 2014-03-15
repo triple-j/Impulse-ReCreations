@@ -1,108 +1,75 @@
-/* doesn't seem to be having problem like visuals */
-/* TODO: check if logged in and find a way to login and redirect here */
-function heri_stats_hash_call( opts ) {
-	var calJUrl = "http://heavyink.com/me/account/calendar.json";
-	var histJUrl = "http://heavyink.com/me/account/shipments.json";
-	var months = new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+function monthly_costs_hash_call( opts ) {
+	var $content,
+	    months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 
-	//if ($('body#customer_login')) return null; // causing problems
-	$('div#main div.content').html(heri_stats_view());
-	$.ajax({
-		url: calJUrl,
-		dataType: 'json',
-		success: function(data) {
-			//console.log(data);
-			//var html = [];
-			var month = "x";
-			var mName = null;
-			//var total = null;
-			$('div#heri_stats').html('');   // clear the html
-			for (i in data) { // TODO: move this into the view function
-				var fullDate = data[i].date;
-				if (fullDate != null) { //tmp = '0000/00/00'; }
-					var date = fullDate.split('/'); // [0]=year [1]=month [2]=day
-					var readableDate = "Week of "+months[date[1]-1]+" "+date[2]+", "+date[0];
-					var rowHtml = [];
+	if ( HerI.current_page() == "/me/calendar" ) {
 
-					// check if the month has changed
-					if (month != date[1]) {
-						month = date[1];
-						mName = months[month-1];
-						mHtml = [];
-						mHtml.push('<div class="month" id="heri_stat_'+mName+'">');
-						mHtml.push('  <h2>'+mName+'</h2>');
-						mHtml.push('  <table>');
-						// 'rowHtml' will go here
-						mHtml.push('  <tr class="subtotal"><td class="label">Subtotal</td><td class="price">$x.xx</td></tr>');
-						mHtml.push('  <tr class="shipping"><td class="label">Shipping cost</td><td class="price">$x.xx</td></tr>');
-						mHtml.push('  <tr class="total"><td class="label">Total</td><td class="price">$x.xx</td></tr>');
-						mHtml.push('  </table>');
-						mHtml.push('</div>');
-						/*if (total != null) {
-							html.push('total:$'+total.toFixed(2));
-							total = 0;
-						}*/
-						//html.push('<br/>');
-						$('div#heri_stats').append(mHtml.join('\n'));
+		$content = $('.calendar').parent();
+		$content.children().addClass('tab-calendar').hide();
+		$content.append( $('<div/>', { class : "tab-monthlyCosts", html : heri_stats_view() }) );
+
+		HerI_Data.getCalanderData({
+			success: function(data) {
+				//console.log(data);
+				//var html = [];
+				var month = "x";
+				var mName = null;
+				//var total = null;
+				$('div#heri_stats').html('');   // clear the html
+				for (i in data) { // TODO: move this into the view function
+					var fullDate = data[i].date;
+					if (fullDate != null) {
+						var date = fullDate;
+						var readableDate = "Week of " + date.text;
+						var rowHtml = [];
+
+						// check if the month has changed
+						if (month != date.month) {
+							month = date.month;
+							mName = months[month-1];
+							mHtml = [];
+							mHtml.push('<div class="month" id="heri_stat_'+mName+'">');
+							mHtml.push('  <h2>'+mName+'</h2>');
+							mHtml.push('  <table>');
+							// 'rowHtml' will go here
+							mHtml.push('  <tr class="subtotal"><td class="label">Subtotal</td><td class="price">$x.xx</td></tr>');
+							mHtml.push('  <tr class="shipping"><td class="label">Shipping cost</td><td class="price">$x.xx</td></tr>');
+							mHtml.push('  <tr class="total"><td class="label">Total</td><td class="price">$x.xx</td></tr>');
+							mHtml.push('  </table>');
+							mHtml.push('</div>');
+							/*if (total != null) {
+								html.push('total:$'+total.toFixed(2));
+								total = 0;
+							}*/
+							//html.push('<br/>');
+							$('div#heri_stats').append(mHtml.join('\n'));
+						}
+
+						// get total for items in shipment
+						var shipTotal = 0;
+						for (j in data[i].items) {
+							shipTotal += data[i].items[j].price;
+						}
+
+						// display shipment info
+						rowHtml.push('<tr class="shipment">');
+						rowHtml.push('  <td class="date">'+readableDate+'</td>');
+						rowHtml.push('  <td class="price">$'+shipTotal.toFixed(2)+'</td>');
+						rowHtml.push('</tr>');
+
+						$('#heri_stat_'+mName+' table .subtotal').before(rowHtml.join('\n'));
 					}
-
-					// get total for items in shipment
-					var shipTotal = 0;
-					for (j in data[i].items) {
-						shipTotal += data[i].items[j].price;
-					}
-
-					// display shipment info
-					rowHtml.push('<tr class="shipment">');
-					rowHtml.push('  <td class="date">'+readableDate+'</td>');
-					rowHtml.push('  <td class="price">$'+shipTotal.toFixed(2)+'</td>');
-					rowHtml.push('</tr>');
-
-					$('#heri_stat_'+mName+' table .subtotal').before(rowHtml.join('\n'));
 				}
+				//html.push('total:$'+total.toFixed(2));
+				//$('div#heri_stats').append(html.join(' '));
+				heri_stats_calc();
 			}
-			//html.push('total:$'+total.toFixed(2));
-			//$('div#heri_stats').append(html.join(' '));
-			heri_stats_calc();
-		},
-		error: function(err) {
-			//alert("ERROR: Try logging in again.");
-			location.hash = "";
-			window.location = "/me/account/calendar";
-			/*window.location = "/login"; sessionStorage.heri_redirect = "/me/account#heri_stats";*/
-		}
-	});
-	/*$.getJSON(calJUrl, function(data) {
-		console.log(data);
-		var html = [];
-		var month = "x";
-		var total = null;
-		for (i in data) {
-			var tmp = data[i].date;
-			if (tmp == null) { tmp = '0000/00/00'; }
-			var date = tmp.split('/'); // [0]=year [1]=month [2]=day
-			if (month != date[1]) {
-				month = date[1];
-				if (total != null) {
-					html.push('total:$'+total.toFixed(2));
-					total = 0;
-				}
-				html.push('<br/>');
-			}
-			for (j in data[i].items) {
-				total += data[i].items[j].price;
-			}
-			html.push(tmp);
-		}
-		html.push('total:$'+total.toFixed(2));
-		$('div#heri_stats').html(html.join(' '));
-	});*/
+		});
 
-	/* TODO: cache in sessionStorage call func to display so dynamically change output */
-	/*$.getJSON(histJUrl, function(data) {
-		console.log(data);
-		$('div#heri_stats_2').html(data[0].date);
-	});*/
+	} else {
+		console.log("ERROR: Page not supported.");
+		return false;
+	}
 }
 
 function heri_stats_view() {

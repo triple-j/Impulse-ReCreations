@@ -1,5 +1,6 @@
 
 /* Section: budget calculator */
+div#heri_stats .month { margin-top:1em; margin-bottom:1em; }
 div#heri_stats .month table { width:320px; }
 div#heri_stats .month table tr.shipment td.date { padding-left:1em; }
 div#heri_stats .month table tr.subtotal td { padding-bottom:8px; }

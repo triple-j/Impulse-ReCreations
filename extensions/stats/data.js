@@ -30,7 +30,7 @@ HerI_Data.getPageHtml = function( page, opts ) {
 	}
 };
 
-HerI_Data.getCalanderData = function( options ) {
+HerI_Data.getCalanderData = function( opts ) {
 
 	var calJUrl = "/me/calendar",
 	    months  = ["January","February","March","April","May","June","July","August","September","October","November","December"];
@@ -93,8 +93,10 @@ HerI_Data.getCalanderData = function( options ) {
 				calData.push( data );
 			});
 
-			console.log( calData );
-		}
+			//console.log( calData );
+			opts.success( calData );
+		},
+		error: opts.error
 	});
 
 };
