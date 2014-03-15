@@ -1,4 +1,6 @@
 
+div.cal_nav { margin-bottom:1em; }
+
 /* Section: budget calculator */
 div#heri_stats .month { margin-top:1em; margin-bottom:1em; }
 div#heri_stats .month table { width:320px; }

@@ -5,7 +5,7 @@ function monthly_costs_hash_call( opts ) {
 	if ( HerI.current_page() == "/me/calendar" ) {
 
 		$content = $('.calendar').parent();
-		$content.children().addClass('tab-calendar').hide();
+		$content.children(':not(.cal_nav)').addClass('tab-calendar').hide();
 		$content.append( $('<div/>', { class : "tab-monthlyCosts", html : heri_stats_view() }) );
 
 		HerI_Data.getCalanderData({
@@ -125,4 +125,18 @@ function heri_stats_ship_cost() {
 		cost = $('input:text[name="custom_cost"]').val();
 
 	return Number(cost);
+}
+
+
+if ( HerI.current_page() == "/me/calendar" ) {
+	$(document).ready(function(){
+		var html = "", $content = $('.calendar').parent();
+
+		html += '<div class="cal_nav">'
+			+ '<a href="/me/calendar">Shipping Calendar</a>'
+			+ ' | <a href="/me/calendar#monthly_costs">Monthly Costs</a>'
+			+ '</div>';
+
+		$content.prepend( html );
+	});
 }
