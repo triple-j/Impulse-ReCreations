@@ -13,6 +13,7 @@
 // get the head/body tag so we can add to it
 var elm_head = document.getElementsByTagName('head')[0],
     elm_body = document.getElementsByTagName('body')[0],
+    elm_html = document.getElementsByTagName('html')[0],
     text_style = "", text_script = "",
     elm_style, elm_script, extensions, idx;
 
@@ -36,8 +37,8 @@ if ( extensions.scripts != undefined ) {
 	}
 }
 
-// add ID to body for easier css overrides
-elm_body.setAttribute('id', "heri");
+// add ID to html for easier css overrides
+elm_html.setAttribute('id', "HerI");
 
 // add style to the head
 elm_style = document.createElement("style");
