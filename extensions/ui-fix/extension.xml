@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension>
+	<name>Minor UI Fixes</name>
+	<description>
+		Minor user interface fixes.
+	</description>
+	<stylesheet>ui-fix.css</stylesheet>
+	<!--javascript>script.js</javascript-->
+</extension>
