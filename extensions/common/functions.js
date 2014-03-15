@@ -40,6 +40,7 @@
 
 		// TODO: limit to given pages
 		if( typeof window[hashCall] == 'function' ) {
+			console.log( "calling: "+hashCall+"()" );
 			window[hashCall](opts);
 		}
 	};

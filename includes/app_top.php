@@ -12,13 +12,20 @@ require('includes/prescription/px_template.php');
 PX_Template::set_template_dir( dirname(dirname(__FILE__))."/templates/" );
 PX_Template::set_template("default");
 
-define('HERI_VERSION', "0.3.0b");
+define('HERI_VERSION', "0.4.0b");
 
 define('DIR_EXTENSIONS', "extensions/");
 
 define('DEBUG_LVL', ($_SERVER['SERVER_NAME'] == 'localhost')?1:0);
 
-$heri_default_extensions = array( "common", "cover-popup", "close-coupon", "login-dialog" );
+$heri_default_extensions = array(
+	"common",
+	"ui-fix",
+	"cover-popup",
+	"close-coupon",
+	"login-dialog",
+	"stats"
+);
 
 function nl2p($string) {
 	$br      = "<!-- newline -->";
