@@ -5,4 +5,10 @@ $(document).ready(function(){
 		HerI.open_dialog({ div: selector });
 		evt.perventDefault();
 	});
+
+	// run functions based of the hash
+	HerI.hash_change( location.hash );
+	$(window).bind('hashchange', function() {
+		HerI.hash_change( location.hash );
+	});
 });
