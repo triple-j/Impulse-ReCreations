@@ -37,9 +37,17 @@ ob_start();
 		}
 
 		$(document).ready(function(){
-			$('#userscript').load("heavyerink.user.js", function(){
-				var filesize = getUTF8Length( $('#userscript').val() );
-				$('#userscript-data').html( "filesize: ~" + (filesize/1024).toFixed(3) + " KB" );
+			$.ajax({
+				url: "heavyerink.user.js",
+				dataType: 'text',
+				success: function(data) {
+					$('#userscript').val( data );
+					var filesize = getUTF8Length( $('#userscript').val() );
+					$('#userscript-data').html( "filesize: ~" + (filesize/1024).toFixed(3) + " KB" );
+				},
+				error: function(err) {
+					console.log( err );
+				}
 			});
 		});
 	</script>
