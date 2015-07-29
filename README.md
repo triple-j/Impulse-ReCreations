@@ -1,9 +1,9 @@
-Heavy*er* Ink
-=============
+Impulse *Re*Creations
+=====================
 
-[Heavy*er* Ink](http://heavyerink.appspot.com/) is a third-party add-on website
-to [HeavyInk](http://heavyink.com/).  Users can download a _Userscript_ to add
-functionality to _HeavyInk.com_.
+[Impulse *Re*Creations](http://impulserecreations.appspot.com/) is a third-party
+add-on website to [Impulse Creations](http://www.impulsecreations.net/).  Users
+can download a _Userscript_ to add functionality to _ImpulseCreations.net_.
 
 
 Copyright and License
