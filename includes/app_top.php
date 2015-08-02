@@ -1,12 +1,12 @@
 <?php
-session_name('HeavyerInk');
+session_name('ImpulseReCreations');
 session_start();
-if ( $irec_page != "/heavyerink.user.js" ) {
+if ( $irec_page != "/impulserecreations.user.js" ) {
 	#setcookie("IREC_REQUEST", "", time() - 3600); // delete cookie
 	unset($_SESSION['IREC_REQUEST']);
 }
 
-define('IREC_VERSION', "0.4.0b");
+define('IREC_VERSION', "0.1.0b");
 
 define('DIR_EXTENSIONS', "extensions/");
 

@@ -1,12 +1,12 @@
 // ==UserScript==
-// @name          HeavyerInk
-// @namespace     http://heavyerink.appspot.com/
-// @description   A third party add-on for the web site HeavyInk.com
-// @version       <?php if(!empty($tmpl_version)){ echo $tmpl_version; } ?>
-// @include       http://heavyink.com/*
-// @include       http://www.heavyink.com/*
-// @include       https://heavyink.com/*
-// @include       https://www.heavyink.com/*
+// @name          Impulse ReCreations
+// @namespace     http://impulserecreations.appspot.com/
+// @description   A third party add-on for the web site ImpulseCreations.net
+// @version       <?php if(!empty($tmpl_version)){ echo $tmpl_version; }; echo PHP_EOL; ?>
+// @include       http://impulsecreations.net/catalog/*
+// @include       http://www.impulsecreations.net/catalog/*
+// @include       https://impulsecreations.net/catalog/*
+// @include       https://www.impulsecreations.net/catalog/*
 // ==/UserScript==
 
 
@@ -17,7 +17,7 @@ var elm_head = document.getElementsByTagName('head')[0],
     text_style = "", text_script = "",
     elm_style, elm_script, extensions, idx;
 
-// set HeavyerInk Userscript version variable
+// set Userscript version variable
 text_script += "var irec_version = \"<?php if(!empty($tmpl_version)){ echo $tmpl_version; } ?>\";\n";
 
 // code to be added

@@ -18,7 +18,7 @@ define('TIMEOUT', 2);
 ob_start();
 ?>
 
-	<meta http-equiv="Refresh" content="<?=TIMEOUT;?>; url=/heavyerink.user.js">
+	<meta http-equiv="Refresh" content="<?=TIMEOUT;?>; url=/impulserecreations.user.js">
 	<script type="text/javascript">
 		window.onload = function() {
 			var intervalID = window.setInterval(function(){
