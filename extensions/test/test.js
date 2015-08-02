@@ -1,1 +1,1 @@
-window.onload = function(){ alert('testing'); };
+window.addEventListener("load",function(){ alert('testing'); });
