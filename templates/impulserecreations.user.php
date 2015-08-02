@@ -1,5 +1,6 @@
 // ==UserScript==
 // @name          Impulse ReCreations
+// @author        Jeremie Jarosh
 // @namespace     http://impulserecreations.appspot.com/
 // @description   A third party add-on for the web site ImpulseCreations.net
 // @version       <?php if(!empty($tmpl_version)){ echo $tmpl_version; }; echo PHP_EOL; ?>
