@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<extension>
-	<name>Login Dialog</name>
-	<description>
-		Open a dialog to login instead of
-	</description>
-	<javascript>login-dialog.js</javascript>
-</extension>

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<extension>
-	<name>Large Cover Viewer</name>
-	<description>
-		This extension will allow you to view a larger image of a cover.
-	</description>
-	<stylesheet>cover-popup.css</stylesheet>
-	<javascript>cover-popup.js</javascript>
-</extension>
