@@ -56,11 +56,6 @@
 				</div>
 			</div>
 			<div id="search">
-				<form action="http://heavyink.com/search" method="post">
-					<label for="q">Search for&nbsp;</label>
-					<input id="q" name="q" type="text" value="">
-					<input type="submit" class="button" value="Go">
-				</form>
 			</div>
 		</div>
 		<div id="content-container">

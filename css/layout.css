@@ -1,7 +1,7 @@
 html, body { margin:0px; padding:0px; }
 body {
     color:white;
-    background-color:black;
+    background-color: #191919;
     font-family: Helvetica, 'Trebuchet MS', Arial, sans-serif;
     padding-bottom: 30px;
 }
@@ -52,6 +52,7 @@ div#logo a {
     position: relative;
     width: 285px;
     padding-bottom: 25px;
+    text-decoration: none;
 }
 div#logo a img { border:0px; }
 

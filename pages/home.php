@@ -17,13 +17,9 @@ ob_start();
 	<div class="features">
 		<h2>Features</h2>
 		<div>
-			<div class="ftr_imgs">
-				<!--div><h4>New Buttons</h4><img src="imgs/ftr-btns.jpg" alt="New Buttons"/></div-->
-				<div><h4>Large Cover Views</h4><img src="imgs/ftr-cvrs.jpg" alt="Large Cover Views"/></div>
-				<!--div><h4>Front Page Quotes</h4><img src="imgs/ftr-quos.jpg" alt="Front Page Quotes"/></div-->
-				<!--div><h4>Add to cart</h4><img src="imgs/ftr-cart.jpg" alt="Cart"/></div-->
-			</div>
-			<div class="clear-last"><h4>More to come&hellip;</h4></div>
+			<ul>
+				<li>Subscription Search</li>
+			</ul>
 		</div>
 	</div>
 
@@ -31,5 +27,5 @@ ob_start();
 $tmpl_body = ob_get_clean();
 
 
-$tmpl_title = "A Third-Party Userscript for HeavyInk";
+$tmpl_title = "A Third-Party Userscript for Impulse Creations";
 include('templates/default.php');
