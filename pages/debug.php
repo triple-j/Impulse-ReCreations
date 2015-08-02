@@ -38,7 +38,7 @@ ob_start();
 
 		$(document).ready(function(){
 			$.ajax({
-				url: "heavyerink.user.js",
+				url: "impulserecreations.user.js",
 				dataType: 'text',
 				success: function(data) {
 					$('#userscript').val( data );
