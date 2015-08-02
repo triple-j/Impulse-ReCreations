@@ -6,8 +6,8 @@ $heri_selected_tab = "Home";
 ob_start();
 ?>
 
-	<h1>Heavy<em>er</em> Ink<sup><small style="color:black">beta</small></sup></h1>
-	<p>Install the <a href="heavyerink.user.js">User Script</a> to get the most out of <b>HeavyInk</b>.
+	<h1>Impulse <em>Re</em>Creations<sup><small style="color:black">beta</small></sup></h1>
+	<p>Install the <a href="impulserecreations.user.js">User Script</a> to get the most out of <b>Impulse Creations</b>.
 		<br/><sup><small style="padding-left:1em;">(Current version: <?=HERI_VERSION;?>)</small></sup></p>
 	<p><small>Tested on Chrome and Firefox (Firefox requires
 		<a href="http://www.greasespot.net/" target="_blank">Greasemonkey</a>, and

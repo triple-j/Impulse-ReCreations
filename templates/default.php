@@ -5,7 +5,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<base href="/">
 
-		<title>(px:region name="title" /) - HeavyerInk</title>
+		<title>(px:region name="title" /) - Impulse ReCreations</title>
 		<link rel="shortcut icon" href="favicon.ico" />
 
 		<!-- STYLE SHEET LINKS -->
@@ -29,7 +29,7 @@
 
 	</head>
 	<body>
-		<div id="github-ribbon"><a href="https://github.com/triple-j/Heavyer-Ink" target="_blank">Fork me on GitHub!</a></div>
+		<div id="github-ribbon"><a href="https://github.com/triple-j/Impulse-ReCreations" target="_blank">Fork me on GitHub!</a></div>
 <?php include_once("includes/analyticstracking.php"); ?>
 
 		<div id="login-popup" style="display:none"><!-- TODO: not needed? --></div>
@@ -44,7 +44,7 @@
 			<div id="logo">
 				<div>
 					<a href="index.php">
-						<img src="imgs/logo-type.png" alt="HeavyER Ink" />
+						<h1>Impulse <em>Re</em>Creations</h1>
 					</a>
 				</div>
 			</div>
@@ -72,8 +72,8 @@
 		</div>
 		<div id="footer">
 			<small>
-				Heavy<strong>er</strong> Ink is a third-party add-on website.  It is not affiliated
-				with <a href="http://heavyink.com/" target="_blank">HeavyInk.com</a> in any way.
+				Impulse <em>Re</em>Creations is a third-party add-on website.  It is not affiliated
+				with <a href="http://www.impulsecreations.net/" target="_blank">Impulse Creations</a> in any way.
 				<br/>
 				Hacked together by <a href="http://triplejweb.developer.se" target="_blank">Jeremie J. Jarosh</a>
 			</small>

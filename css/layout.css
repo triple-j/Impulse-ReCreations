@@ -39,7 +39,7 @@ div#logo {
     width: 980px;
 }
 div#logo div {
-    background: url(../imgs/logo-bg.png) no-repeat 0% 0%;
+    /*background: url(../imgs/logo-bg.png) no-repeat 0% 0%;*/
     display: block;
     height: 431px;
     margin-left: -290px;
