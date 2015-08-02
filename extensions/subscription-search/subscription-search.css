@@ -1,0 +1,21 @@
+
+#title-search-wrapper {
+	margin: 0.5em auto;
+	text-align: center;
+}
+#title-search-wrapper label,
+#title-search-wrapper input {
+	font-size: 2em;
+}
+#title-search-wrapper label+input {
+	margin-left: 0.25em;
+}
+
+select[name^=title] {
+	width: 100%;
+	min-height: 3em;
+	resize: vertical;
+}
+select[name^=title] option:disabled {
+	display: none;
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension>
+	<name>Subscription Search</name>
+	<version>0.8.0</version>
+	<description>
+		<![CDATA[
+		Narrow down comic titles in the 'Reserve System'  based on search terms.
+		]]>
+	</description>
+	<stylesheet>subscription-search.css</stylesheet>
+	<javascript>subscription-search.js</javascript>
+</extension>
