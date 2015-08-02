@@ -75,9 +75,8 @@ header("Pragma: no-cache");
 
 header('Content-type: text/javascript; charset=utf-8');
 
-PX_Template::set_template("heavyerink.user");
 
-PX_Template::set_region('version', HERI_VERSION.($is_default?"":" (".$custom_hash.")"));
-PX_Template::set_region('extension_json', json_encode($extensions_data));
-@PX_Template::out();
+$tmpl_version = HERI_VERSION.($is_default?"":" (".$custom_hash.")");
+$tmpl_extension_json = json_encode($extensions_data);
+include('templates/heavyerink.user.php');
 

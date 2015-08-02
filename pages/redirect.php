@@ -46,7 +46,5 @@ ob_start();
 $tmpl_body = ob_get_clean();
 
 
-PX_Template::set_region('title', "Redirecting");
-PX_Template::set_region('head', $tmpl_head);
-PX_Template::set_region('body', $tmpl_body);
-PX_Template::out();
+$tmpl_title = "Redirecting";
+include('templates/default.php');

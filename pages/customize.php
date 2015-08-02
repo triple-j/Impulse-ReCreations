@@ -63,6 +63,5 @@ endforeach;
 $tmpl_body = ob_get_clean();
 
 
-PX_Template::set_region('title', "Customize your Userscript");
-PX_Template::set_region('body', $tmpl_body);
-PX_Template::out();
+$tmpl_title = "Customize your Userscript";
+include('templates/default.php');

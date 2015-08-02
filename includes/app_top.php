@@ -6,12 +6,6 @@ if ( $heri_page != "/heavyerink.user.js" ) {
 	unset($_SESSION['HERI_REQUEST']);
 }
 
-require('includes/prescription/px.php');
-require('includes/prescription/px_template.php');
-
-PX_Template::set_template_dir( dirname(dirname(__FILE__))."/templates/" );
-PX_Template::set_template("default");
-
 define('HERI_VERSION', "0.4.0b");
 
 define('DIR_EXTENSIONS', "extensions/");

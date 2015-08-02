@@ -5,7 +5,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<base href="/">
 
-		<title>(px:region name="title" /) - Impulse ReCreations</title>
+		<title><?php if(!empty($tmpl_title)){ echo $tmpl_title; } ?> - Impulse ReCreations</title>
 		<link rel="shortcut icon" href="favicon.ico" />
 
 		<!-- STYLE SHEET LINKS -->
@@ -25,7 +25,7 @@
 		<link rel="stylesheet" type="text/css" href="css/main.css" />
 		<link rel="stylesheet" type="text/css" href="css/facebox.css" />
 
-		(px:region name="head" /)
+		<?php if(!empty($tmpl_head)){ echo $tmpl_head; } ?>
 
 	</head>
 	<body>
@@ -37,7 +37,7 @@
 			<div id="account" class="nav">
 				<div class="nav nav_text">
 
-					(px:region name="extra_ul_nav" /)
+					<?php if(!empty($tmpl_extra_ul_nav)){ echo $tmpl_extra_ul_nav; } ?>
 
 				</div><!-- TODO: not needed? -->
 			</div>
@@ -66,7 +66,7 @@
 		<div id="content-container">
 			<div id="content">
 
-				(px:region name="body" /)
+				<?php if(!empty($tmpl_body)){ echo $tmpl_body; } ?>
 
 			</div>
 		</div>

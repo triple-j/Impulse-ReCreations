@@ -31,6 +31,5 @@ ob_start();
 $tmpl_body = ob_get_clean();
 
 
-PX_Template::set_region('title', "A Third-Party Userscript for HeavyInk");
-PX_Template::set_region('body', $tmpl_body);
-PX_Template::out();
+$tmpl_title = "A Third-Party Userscript for HeavyInk";
+include('templates/default.php');

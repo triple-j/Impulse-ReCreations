@@ -2,7 +2,7 @@
 // @name          HeavyerInk
 // @namespace     http://heavyerink.appspot.com/
 // @description   A third party add-on for the web site HeavyInk.com
-// @version       (px:region name="version"/)
+// @version       <?php if(!empty($tmpl_version)){ echo $tmpl_version; } ?>
 // @include       http://heavyink.com/*
 // @include       http://www.heavyink.com/*
 // @include       https://heavyink.com/*
@@ -18,10 +18,10 @@ var elm_head = document.getElementsByTagName('head')[0],
     elm_style, elm_script, extensions, idx;
 
 // set HeavyerInk Userscript version variable
-text_script += "var heri_version = \"(px:region name="version"/)\";\n";
+text_script += "var heri_version = \"<?php if(!empty($tmpl_version)){ echo $tmpl_version; } ?>\";\n";
 
 // code to be added
-extensions = (px:region name="extension_json"/);
+extensions = <?php if(!empty($tmpl_extension_json)){ echo $tmpl_extension_json; } ?>;
 
 // compile css
 if ( extensions.styles != undefined ) {

@@ -13,6 +13,5 @@ ob_start();
 $tmpl_body = ob_get_clean();
 
 
-PX_Template::set_region('title', "404");
-PX_Template::set_region('body', $tmpl_body);
-PX_Template::out();
+$tmpl_title = "404";
+include('templates/default.php');
