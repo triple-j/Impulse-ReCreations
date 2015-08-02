@@ -13,12 +13,6 @@ define('DIR_EXTENSIONS', "extensions/");
 define('DEBUG_LVL', ($_SERVER['SERVER_NAME'] == 'localhost')?1:0);
 
 $irec_default_extensions = array(
-	"common",
-	"ui-fix",
-	"cover-popup",
-	"close-coupon",
-	"login-dialog",
-	"stats"
 );
 
 function nl2p($string) {
