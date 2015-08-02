@@ -74,33 +74,34 @@
 
 	// do stuff
 	window.addEventListener("load",function(){
+		if ( IReC.current_page() === "/catalog/subscription.php" ) {
+			var elmList, 
+				selectElm, 
+				titlesTableElm,
+				i = 1;
 		
-		var elmList, 
-			selectElm, 
-			titlesTableElm,
-			i = 1;
-	
-		do {
-			elmList = document.getElementsByName('title'+i+'[]');
-			selectElm = elmList[0] || false;
-			i++;
-		
-			if ( selectElm !== false ) {
+			do {
+				elmList = document.getElementsByName('title'+i+'[]');
+				selectElm = elmList[0] || false;
+				i++;
 			
-				titleSelectElmList.push(selectElm);
-		
-				if ( titlesTableElm === undefined ) {
-					titlesTableElm = findParentTable( selectElm );
+				if ( selectElm !== false ) {
+				
+					titleSelectElmList.push(selectElm);
+			
+					if ( titlesTableElm === undefined ) {
+						titlesTableElm = findParentTable( selectElm );
+					}
 				}
+			} while (selectElm);
+		
+			if ( titlesTableElm ) {
+				titlesTableElm.parentNode.insertBefore(createSearchBox(),titlesTableElm);
+				titlesTableElm.classList.add("subscription-selects")
+			} else {
+				console.error("Parent <TABLE> not found.");
 			}
-		} while (selectElm);
-	
-		if ( titlesTableElm ) {
-			titlesTableElm.parentNode.insertBefore(createSearchBox(),titlesTableElm);
-		} else {
-			console.error("Parent <TABLE> not found.");
 		}
-	
 	},false);
 	
 })(window);

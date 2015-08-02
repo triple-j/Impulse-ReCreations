@@ -11,11 +11,11 @@
 	margin-left: 0.25em;
 }
 
-select[name^=title] {
+.subscription-selects select[name^=title] {
 	width: 100%;
 	min-height: 3em;
 	resize: vertical;
 }
-select[name^=title] option:disabled {
+.subscription-selects select[name^=title] option:disabled {
 	display: none;
 }
