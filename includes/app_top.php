@@ -1,18 +1,18 @@
 <?php
 session_name('HeavyerInk');
 session_start();
-if ( $heri_page != "/heavyerink.user.js" ) {
-	#setcookie("HERI_REQUEST", "", time() - 3600); // delete cookie
-	unset($_SESSION['HERI_REQUEST']);
+if ( $irec_page != "/heavyerink.user.js" ) {
+	#setcookie("IREC_REQUEST", "", time() - 3600); // delete cookie
+	unset($_SESSION['IREC_REQUEST']);
 }
 
-define('HERI_VERSION', "0.4.0b");
+define('IREC_VERSION', "0.4.0b");
 
 define('DIR_EXTENSIONS', "extensions/");
 
 define('DEBUG_LVL', ($_SERVER['SERVER_NAME'] == 'localhost')?1:0);
 
-$heri_default_extensions = array(
+$irec_default_extensions = array(
 	"common",
 	"ui-fix",
 	"cover-popup",

@@ -3,24 +3,24 @@ require('includes/app_top.php');
 include('includes/minify/CSSmin.php');
 include('includes/minify/JSMin.php');
 
-#if ( isset($_COOKIE['HERI_REQUEST']) ) {
-#	$_REQUEST = json_decode( $_COOKIE['HERI_REQUEST'], true );
-#	#setcookie("HERI_REQUEST", "", time() - 3600); // delete cookie
+#if ( isset($_COOKIE['IREC_REQUEST']) ) {
+#	$_REQUEST = json_decode( $_COOKIE['IREC_REQUEST'], true );
+#	#setcookie("IREC_REQUEST", "", time() - 3600); // delete cookie
 #}
 
-if ( isset($_SESSION['HERI_REQUEST']) ) {
-	$_REQUEST = json_decode( $_SESSION['HERI_REQUEST'], true );
-	#unset($_SESSION['HERI_REQUEST']);
+if ( isset($_SESSION['IREC_REQUEST']) ) {
+	$_REQUEST = json_decode( $_SESSION['IREC_REQUEST'], true );
+	#unset($_SESSION['IREC_REQUEST']);
 }
 
 
 $cssmin = new CSSmin();
 
-$extensions = isset($_REQUEST['extensions'])?$_REQUEST['extensions']:$heri_default_extensions;
+$extensions = isset($_REQUEST['extensions'])?$_REQUEST['extensions']:$irec_default_extensions;
 $extensions_data = array();
 
-$is_default  = (bool)( identical_values($heri_default_extensions, $extensions) );
-$custom_hash = md5( HERI_VERSION . implode('',$extensions) );
+$is_default  = (bool)( identical_values($irec_default_extensions, $extensions) );
+$custom_hash = md5( IREC_VERSION . implode('',$extensions) );
 
 
 foreach ( $extensions as $extension ) {
@@ -76,7 +76,7 @@ header("Pragma: no-cache");
 header('Content-type: text/javascript; charset=utf-8');
 
 
-$tmpl_version = HERI_VERSION.($is_default?"":" (".$custom_hash.")");
+$tmpl_version = IREC_VERSION.($is_default?"":" (".$custom_hash.")");
 $tmpl_extension_json = json_encode($extensions_data);
 include('templates/heavyerink.user.php');
 

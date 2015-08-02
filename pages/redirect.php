@@ -8,8 +8,8 @@
 require('includes/app_top.php');
 
 
-#setcookie("HERI_REQUEST", json_encode($_REQUEST));
-$_SESSION['HERI_REQUEST'] = json_encode($_REQUEST);
+#setcookie("IREC_REQUEST", json_encode($_REQUEST));
+$_SESSION['IREC_REQUEST'] = json_encode($_REQUEST);
 
 
 define('TIMEOUT', 2);

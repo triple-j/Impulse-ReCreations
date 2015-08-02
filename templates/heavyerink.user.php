@@ -18,7 +18,7 @@ var elm_head = document.getElementsByTagName('head')[0],
     elm_style, elm_script, extensions, idx;
 
 // set HeavyerInk Userscript version variable
-text_script += "var heri_version = \"<?php if(!empty($tmpl_version)){ echo $tmpl_version; } ?>\";\n";
+text_script += "var irec_version = \"<?php if(!empty($tmpl_version)){ echo $tmpl_version; } ?>\";\n";
 
 // code to be added
 extensions = <?php if(!empty($tmpl_extension_json)){ echo $tmpl_extension_json; } ?>;
@@ -38,12 +38,12 @@ if ( extensions.scripts != undefined ) {
 }
 
 // add ID to html for easier css overrides
-elm_html.setAttribute('id', "HerI");
+elm_html.setAttribute('id', "IReC");
 
 // add style to the head
 elm_style = document.createElement("style");
 elm_style.setAttribute('type', "text/css");
-elm_style.setAttribute('title', "heri");
+elm_style.setAttribute('title', "irec");
 if ( elm_style.styleSheet ) {
 	elm_style.styleSheet.cssText = text_style;
 } else {
@@ -54,6 +54,6 @@ elm_head.appendChild(elm_style);
 // add javascript to the head
 elm_script = document.createElement("script");
 elm_script.setAttribute('type','text/javascript');
-elm_script.setAttribute('title', "heri");
+elm_script.setAttribute('title', "irec");
 elm_script.text = text_script;
 elm_head.appendChild(elm_script);

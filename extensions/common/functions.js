@@ -2,20 +2,20 @@
 
 	"use strict";
 
-	window.HerI = {
-		version : window.heri_version
+	window.IReC = {
+		version : window.irec_version
 	};
 
-	HerI.open_dialog = function( param ) {
+	IReC.open_dialog = function( param ) {
 		$.facebox( param );
 	};
 
-	HerI.close_dialog = function() {
+	IReC.close_dialog = function() {
 		$(document).trigger('close.facebox');
 	};
 
 
-	HerI.user = function() {
+	IReC.user = function() {
 		var user = false,
 		    $linkElm = $('#welcome a');
 
@@ -27,13 +27,13 @@
 	};
 
 
-	HerI.current_page = function() {
+	IReC.current_page = function() {
 		var page = window.location.pathname;
 		return page;
 	};
 
 
-	HerI.hash_change = function( hash ) {
+	IReC.hash_change = function( hash ) {
 		var opts     = hash.split('.'),
 		    cmd      = opts.shift(),
 		    hashCall = cmd.substring(1) + "_hash_call";

@@ -1,7 +1,7 @@
 <?php
 require('includes/app_top.php');
 
-$heri_selected_tab = "Customize";
+$irec_selected_tab = "Customize";
 
 $extensions = array();
 
@@ -18,7 +18,7 @@ if ( is_dir($dir) ) {
 				$xml = new SimpleXMLElement( $xmlcontents, LIBXML_NOCDATA );
 
 				$extensions[$file] = (array)$xml;
-				$extensions[$file]['default'] = (bool)( in_array($file, $heri_default_extensions) );
+				$extensions[$file]['default'] = (bool)( in_array($file, $irec_default_extensions) );
 			}
 		}
 		closedir($dh);
@@ -39,7 +39,7 @@ foreach( $extensions as $ext_id=>$ext ):
 				<input type="checkbox" name="extensions[]" value="<?=$ext_id;?>" <?=$selected;?> />
 				<?=$ext['name'];?>
 			</label>
-			<a class="info" href="<?=$heri_page;?>#info-<?=$ext_id;?>" rel="facebox">i</a>
+			<a class="info" href="<?=$irec_page;?>#info-<?=$ext_id;?>" rel="facebox">i</a>
 			<div id="info-<?=$ext_id;?>" class="info-dialog">
 				<h1><?=$ext['name'];?></h1>
 				<div class="desc">

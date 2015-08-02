@@ -6,7 +6,7 @@ include('includes/minify/JSMinPlus.php');
 
 $use_plus = false;
 
-$filename = basename($heri_page);
+$filename = basename($irec_page);
 $filecontents = file_get_contents('userscript-data/js/'.$filename);
 
 $minifiedJs = $use_plus ? JSMinPlus::minify($filecontents) : JSMin::minify($filecontents);

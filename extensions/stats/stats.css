@@ -2,12 +2,12 @@
 div.cal_nav { margin-bottom:1em; }
 
 /* Section: budget calculator */
-div#heri_stats .month { margin-top:1em; margin-bottom:1em; }
-div#heri_stats .month table { width:320px; }
-div#heri_stats .month table tr.shipment td.date { padding-left:1em; }
-div#heri_stats .month table tr.subtotal td { padding-bottom:8px; }
-div#heri_stats .month table tr.subtotal td,
-div#heri_stats .month table tr.shipping td,
-div#heri_stats .month table tr.total td { text-align:right; font-weight:bold; }
-div#heri_stats .month table td.price { text-align:right; font-family:monospace; }
+div#irec_stats .month { margin-top:1em; margin-bottom:1em; }
+div#irec_stats .month table { width:320px; }
+div#irec_stats .month table tr.shipment td.date { padding-left:1em; }
+div#irec_stats .month table tr.subtotal td { padding-bottom:8px; }
+div#irec_stats .month table tr.subtotal td,
+div#irec_stats .month table tr.shipping td,
+div#irec_stats .month table tr.total td { text-align:right; font-weight:bold; }
+div#irec_stats .month table td.price { text-align:right; font-family:monospace; }
 /* EndSection: budget calculator */

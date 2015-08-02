@@ -14,7 +14,7 @@ function print_arr( $array, $caption = null ) {
 	return $html;
 }
 
-$heri_selected_tab = "[ debug ]";
+$irec_selected_tab = "[ debug ]";
 
 ob_start();
 ?>

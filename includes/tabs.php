@@ -13,7 +13,7 @@ if ( DEBUG_LVL >= 1 ) {
 		<ul>
 <?php
 foreach ($tabs as $tab):
-	$class  = (isset($heri_selected_tab) && $heri_selected_tab == $tab['label'])
+	$class  = (isset($irec_selected_tab) && $irec_selected_tab == $tab['label'])
 		? "class=\"selected\"" : "";
 	$target = ( substr($tab['url'],0,4) == "http" )
 		? "target=\"_blank\"" : "";

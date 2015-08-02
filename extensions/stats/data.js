@@ -1,7 +1,7 @@
-window.HerI_Data = {};
+window.IReC_Data = {};
 
 // TODO: move function to common:functions.js
-HerI_Data.getPageHtml = function( page, opts ) {
+IReC_Data.getPageHtml = function( page, opts ) {
 
 	var html, stripScripts = function( html ) {
 		html = html.replace(/\s+/g, " ");
@@ -10,7 +10,7 @@ HerI_Data.getPageHtml = function( page, opts ) {
 		return html;
 	};
 
-	if ( HerI.current_page() == page ) {
+	if ( IReC.current_page() == page ) {
 
 		html = stripScripts( $('html')[0].outerHTML );
 		opts.success( html );
@@ -30,12 +30,12 @@ HerI_Data.getPageHtml = function( page, opts ) {
 	}
 };
 
-HerI_Data.getCalanderData = function( opts ) {
+IReC_Data.getCalanderData = function( opts ) {
 
 	var calJUrl = "/me/calendar",
 	    months  = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 
-	HerI_Data.getPageHtml(calJUrl, {
+	IReC_Data.getPageHtml(calJUrl, {
 		success: function(html) {
 			var $dom = $( html ), calData = [];
 

@@ -2,20 +2,20 @@ function monthly_costs_hash_call( opts ) {
 	var $content,
 	    months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 
-	if ( HerI.current_page() == "/me/calendar" ) {
+	if ( IReC.current_page() == "/me/calendar" ) {
 
 		$content = $('.calendar').parent();
 		$content.children(':not(.cal_nav)').addClass('tab-calendar').hide();
-		$content.append( $('<div/>', { class : "tab-monthlyCosts", html : heri_stats_view() }) );
+		$content.append( $('<div/>', { class : "tab-monthlyCosts", html : irec_stats_view() }) );
 
-		HerI_Data.getCalanderData({
+		IReC_Data.getCalanderData({
 			success: function(data) {
 				//console.log(data);
 				//var html = [];
 				var month = "x";
 				var mName = null;
 				//var total = null;
-				$('div#heri_stats').html('');   // clear the html
+				$('div#irec_stats').html('');   // clear the html
 				for (i in data) { // TODO: move this into the view function
 					var fullDate = data[i].date;
 					if (fullDate != null) {
@@ -28,7 +28,7 @@ function monthly_costs_hash_call( opts ) {
 							month = date.month;
 							mName = months[month-1];
 							mHtml = [];
-							mHtml.push('<div class="month" id="heri_stat_'+mName+'">');
+							mHtml.push('<div class="month" id="irec_stat_'+mName+'">');
 							mHtml.push('  <h2>'+mName+'</h2>');
 							mHtml.push('  <table>');
 							// 'rowHtml' will go here
@@ -42,7 +42,7 @@ function monthly_costs_hash_call( opts ) {
 								total = 0;
 							}*/
 							//html.push('<br/>');
-							$('div#heri_stats').append(mHtml.join('\n'));
+							$('div#irec_stats').append(mHtml.join('\n'));
 						}
 
 						// get total for items in shipment
@@ -57,12 +57,12 @@ function monthly_costs_hash_call( opts ) {
 						rowHtml.push('  <td class="price">$'+shipTotal.toFixed(2)+'</td>');
 						rowHtml.push('</tr>');
 
-						$('#heri_stat_'+mName+' table .subtotal').before(rowHtml.join('\n'));
+						$('#irec_stat_'+mName+' table .subtotal').before(rowHtml.join('\n'));
 					}
 				}
 				//html.push('total:$'+total.toFixed(2));
-				//$('div#heri_stats').append(html.join(' '));
-				heri_stats_calc();
+				//$('div#irec_stats').append(html.join(' '));
+				irec_stats_calc();
 			}
 		});
 
@@ -72,32 +72,32 @@ function monthly_costs_hash_call( opts ) {
 	}
 }
 
-function heri_stats_view() {
+function irec_stats_view() {
 	var html = [];
 	html.push('<div class="header"><h2>Monthly Costs</h2></div>');
 	html.push('<p>(beginnings of a budget calculator)</p>');
-	html.push('<form id="heri_stats_form" action="javascript:$(\'input:radio[name=ship_cost]\')[2].checked=true;heri_stats_calc();">');
-	html.push(' <label><input type="radio" name="ship_cost" value="4.99" checked="checked" onchange="heri_stats_calc();"/>$4.99</label>');
-	html.push(' <label><input type="radio" name="ship_cost" value="9.99" onchange="heri_stats_calc();"/>$9.99</label>');
-	html.push(' <input type="radio" name="ship_cost" value="custom" onchange="heri_stats_calc();"/>$<input type="text" name="custom_cost" value="2.99" />');
+	html.push('<form id="irec_stats_form" action="javascript:$(\'input:radio[name=ship_cost]\')[2].checked=true;irec_stats_calc();">');
+	html.push(' <label><input type="radio" name="ship_cost" value="4.99" checked="checked" onchange="irec_stats_calc();"/>$4.99</label>');
+	html.push(' <label><input type="radio" name="ship_cost" value="9.99" onchange="irec_stats_calc();"/>$9.99</label>');
+	html.push(' <input type="radio" name="ship_cost" value="custom" onchange="irec_stats_calc();"/>$<input type="text" name="custom_cost" value="2.99" />');
 	html.push('</form><br class="clear"/>');
-	html.push('<div id="heri_stats">');
-	html.push(' <div class="heri_load"></div>');
+	html.push('<div id="irec_stats">');
+	html.push(' <div class="irec_load"></div>');
 	html.push('</div>');
 
 	return html.join('\n');
 }
 
-function heri_stats_calc() {
-	var shipCost = heri_stats_ship_cost();
-	$('div#heri_stats .month .shipping td.price').animate({ backgroundColor: "#FFFFC9" }, 300)
+function irec_stats_calc() {
+	var shipCost = irec_stats_ship_cost();
+	$('div#irec_stats .month .shipping td.price').animate({ backgroundColor: "#FFFFC9" }, 300)
 			.animate({ backgroundColor: "white" }, 500);
-	$('div#heri_stats .month .total td.price').animate({ backgroundColor: "#FFFFC9" }, 300)
+	$('div#irec_stats .month .total td.price').animate({ backgroundColor: "#FFFFC9" }, 300)
 			.animate({ backgroundColor: "white" }, 500);
-	//$('div#heri_stats .month .shipping td.price').animate({ color: "#b00" }, 300).animate({ color: "black" }, 500);
-	//$('div#heri_stats .month .total td.price').animate({ color: "#b00" }, 300).animate({ color: "black" }, 500);
+	//$('div#irec_stats .month .shipping td.price').animate({ color: "#b00" }, 300).animate({ color: "black" }, 500);
+	//$('div#irec_stats .month .total td.price').animate({ color: "#b00" }, 300).animate({ color: "black" }, 500);
 
-	$('div#heri_stats .month').each(function() {
+	$('div#irec_stats .month').each(function() {
 		var subTotal = 0;
 		var total = 0;
 		//console.log($(this).children('h2').text());
@@ -118,7 +118,7 @@ function heri_stats_calc() {
 	});
 }
 
-function heri_stats_ship_cost() {
+function irec_stats_ship_cost() {
 	/* get cost from form */
 	var cost = $('input:radio[name="ship_cost"]:checked').val();
 	if (cost == "custom")
@@ -128,7 +128,7 @@ function heri_stats_ship_cost() {
 }
 
 
-if ( HerI.current_page() == "/me/calendar" ) {
+if ( IReC.current_page() == "/me/calendar" ) {
 	$(document).ready(function(){
 		var html = "", $content = $('.calendar').parent();
 

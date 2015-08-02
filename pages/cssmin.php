@@ -5,7 +5,7 @@ include('includes/minify/CSSmin.php');
 
 $use_plus = false;
 
-$filename = basename($heri_page);
+$filename = basename($irec_page);
 $filecontents = file_get_contents('userscript-data/css/'.$filename);
 
 $cssmin = new CSSmin();
