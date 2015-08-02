@@ -13,6 +13,8 @@ define('DIR_EXTENSIONS', "extensions/");
 define('DEBUG_LVL', ($_SERVER['SERVER_NAME'] == 'localhost')?1:0);
 
 $irec_default_extensions = array(
+	"common",
+	"subscription-search"
 );
 
 function nl2p($string) {
