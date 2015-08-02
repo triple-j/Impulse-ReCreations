@@ -1,4 +1,4 @@
-(function( $, window, undefined ) {
+(function( window, undefined ) {
 
 	"use strict";
 
@@ -7,23 +7,23 @@
 	};
 
 	IReC.open_dialog = function( param ) {
-		$.facebox( param );
+		//$.facebox( param );
 	};
 
 	IReC.close_dialog = function() {
-		$(document).trigger('close.facebox');
+		//$(document).trigger('close.facebox');
 	};
 
 
 	IReC.user = function() {
-		var user = false,
+		/*var user = false,
 		    $linkElm = $('#welcome a');
 
 		if ( $linkElm.length > 0 ) {
 			user = $linkElm.text();
 		}
 
-		return user;
+		return user;*/
 	};
 
 
@@ -45,4 +45,4 @@
 		}
 	};
 
-})( jQuery, window );
+})( window );

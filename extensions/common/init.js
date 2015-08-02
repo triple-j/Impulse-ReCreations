@@ -1,4 +1,4 @@
-$(document).ready(function(){
+/*$(document).ready(function(){
 	// open dialog based on href
 	$(document).on('click', 'a[rel=irec-dialog]', function(evt){
 		var selector = $(this).attr('href');
@@ -11,4 +11,4 @@ $(document).ready(function(){
 	$(window).bind('hashchange', function() {
 		IReC.hash_change( location.hash );
 	});
-});
+});*/
