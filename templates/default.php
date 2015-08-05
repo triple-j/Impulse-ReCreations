@@ -6,7 +6,6 @@
 		<base href="/">
 
 		<title><?php if(!empty($tmpl_title)){ echo $tmpl_title; } ?> - Impulse ReCreations</title>
-		<link rel="shortcut icon" href="favicon.ico" />
 
 		<!-- STYLE SHEET LINKS -->
 		<link rel="stylesheet" type="text/css" href="css/layout.css" />
@@ -30,7 +29,7 @@
 	</head>
 	<body>
 		<div id="github-ribbon"><a href="https://github.com/triple-j/Impulse-ReCreations" target="_blank">Fork me on GitHub!</a></div>
-<?php include_once("includes/analyticstracking.php"); ?>
+<?php /*include_once("includes/analyticstracking.php");*/ ?>
 
 		<div id="login-popup" style="display:none"><!-- TODO: not needed? --></div>
 		<div id="header">
