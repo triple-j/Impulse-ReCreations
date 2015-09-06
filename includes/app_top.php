@@ -6,7 +6,7 @@ if ( $irec_page != "/impulserecreations.user.js" ) {
 	unset($_SESSION['IREC_REQUEST']);
 }
 
-define('IREC_VERSION', "0.1.0b");
+define('IREC_VERSION', "0.1.1b");
 
 define('DIR_EXTENSIONS', "extensions/");
 
@@ -14,7 +14,8 @@ define('DEBUG_LVL', ($_SERVER['SERVER_NAME'] == 'localhost')?1:0);
 
 $irec_default_extensions = array(
 	"common",
-	"subscription-search"
+	"subscription-search",
+	"one-and-done"
 );
 
 function nl2p($string) {
