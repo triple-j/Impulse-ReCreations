@@ -38,8 +38,8 @@ if ( extensions.scripts != undefined ) {
 	}
 }
 
-// add ID to html for easier css overrides
-elm_html.setAttribute('id', "IReC");
+// add Class to html for easier css overrides
+elm_html.classList.add("IReC");
 
 // add style to the head
 elm_style = document.createElement("style");

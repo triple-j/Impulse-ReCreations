@@ -77,6 +77,6 @@ header('Content-type: text/javascript; charset=utf-8');
 
 
 $tmpl_version = IREC_VERSION.($is_default?"":" (".$custom_hash.")");
-$tmpl_extension_json = json_encode($extensions_data);
+$tmpl_extension_json = json_encode($extensions_data, JSON_PRETTY_PRINT);
 include('templates/impulserecreations.user.php');
 

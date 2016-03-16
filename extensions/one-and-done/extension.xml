@@ -6,21 +6,29 @@
 		This is a catch-all extension.  All features will be added here.
 		]]>
 	</description>
-	
-	<stylesheet>styles/subscription.css</stylesheet>
+
+	<!-- CSS -->
+	<stylesheet>styles/ui-fix.css</stylesheet>
+	<stylesheet>styles/pages/subscription/main.css</stylesheet>
 
 	<!-- TheD -->
-	<javascript>TheD/d.externalDOM.js</javascript>
-	<javascript>TheD/d.forEach.js</javascript>
-	<javascript>TheD/d.matches.js</javascript>
-	<javascript>TheD/d.query.js</javascript>
-	<javascript>TheD/d.queryParent.js</javascript>
-	<javascript>TheD/d.queryText.js</javascript>
+	<javascript>vendor/TheD/d.externalDOM.js</javascript>
+	<javascript>vendor/TheD/d.forEach.js</javascript>
+	<javascript>vendor/TheD/d.matches.js</javascript>
+	<javascript>vendor/TheD/d.query.js</javascript>
+	<javascript>vendor/TheD/d.queryParent.js</javascript>
+	<javascript>vendor/TheD/d.queryText.js</javascript>
 
-	<!-- Add Element Hooks -->
-	<javascript>element-hooks/IReC_hook.all_pages.js</javascript>
-	<javascript>element-hooks/IReC_hook.subscription.js</javascript>
-	<javascript>element-hooks/main.js</javascript>
+	<!-- Base -->
+	<javascript>base/initialize.js</javascript>
+	<javascript>base/functions.js</javascript>
 
-	<require>common</require>
+	<!-- Add Page Hooks -->
+	<javascript>page_hooks/initialize.js</javascript>
+	<javascript>page_hooks/ALL_PAGES/execute.js</javascript>
+	<javascript>page_hooks/ALL_PAGES/add_classes.group_infoBoxes.js</javascript>
+	<javascript>page_hooks/subscription/execute.js</javascript>
+	<javascript>page_hooks/subscription/add_classes.my_subscriptions.js</javascript>
+	<javascript>page_hooks/onload.js</javascript>
+
 </extension>
