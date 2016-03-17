@@ -1,0 +1,8 @@
+.IReC #display_table {
+	box-sizing: border-box;
+	padding-left: 53px;
+}
+
+.IReC #display_table .TableName {
+	vertical-align: middle;
+}
