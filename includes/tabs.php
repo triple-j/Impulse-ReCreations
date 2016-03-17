@@ -2,7 +2,8 @@
 /* Tab Menu */
 $tabs = array(
 	array( 'url'=>"index.php", 'label'=>"Home" ),
-	array( 'url'=>"customize", 'label'=>"Customize" ),
+	array( 'url'=>"impulserecreations.user.js", 'label'=>"Install" ),
+	//array( 'url'=>"customize", 'label'=>"Customize" ),
 	array( 'url'=>"http://www.impulsecreations.net/", 'label'=>"Impulse Creations" )
 );
 if ( DEBUG_LVL >= 1 ) {
