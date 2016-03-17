@@ -6,4 +6,5 @@ window.IReC.page_hooks.ALL_PAGES.execute = function( documentObject ) {
 	documentObject = documentObject || document;
 
 	IReC.page_hooks.ALL_PAGES.add_classes.group_infoBoxes(documentObject);
+	IReC.page_hooks.ALL_PAGES.add_classes.page_name(documentObject);
 };

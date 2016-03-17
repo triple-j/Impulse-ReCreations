@@ -32,6 +32,7 @@
 	<javascript>page_hooks/initialize.js</javascript>
 	<javascript>page_hooks/ALL_PAGES/execute.js</javascript>
 	<javascript>page_hooks/ALL_PAGES/add_classes.group_infoBoxes.js</javascript>
+	<javascript>page_hooks/ALL_PAGES/add_classes.page_name.js</javascript>
 	<javascript>page_hooks/account/execute.js</javascript>
 	<javascript>page_hooks/account/add_classes.previous_orders.js</javascript>
 	<javascript>page_hooks/subscription/execute.js</javascript>
