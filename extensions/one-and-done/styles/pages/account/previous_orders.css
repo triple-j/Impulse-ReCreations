@@ -1,0 +1,11 @@
+.irec--previous-orders tr:nth-child(odd) {
+	background-color: #cbcccc;
+}
+
+.irec--previous-orders tr.moduleRowOver {
+	background-color: #717171;
+}
+.irec--previous-orders tr.moduleRowOver td,
+.irec--previous-orders tr.moduleRowOver td.main {
+	color: #FFFFFF;
+}
