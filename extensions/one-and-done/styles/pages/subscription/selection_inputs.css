@@ -1,0 +1,5 @@
+.irec--subscription-selects .irec--comic-title-select {
+	width: 100%;
+	min-height: 3em;
+	resize: vertical;
+}

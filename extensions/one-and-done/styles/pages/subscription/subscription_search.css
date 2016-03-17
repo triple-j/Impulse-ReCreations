@@ -1,0 +1,16 @@
+
+#irec--title-search-wrapper {
+	margin: 0.5em auto;
+	text-align: center;
+}
+#irec--title-search-wrapper label,
+#irec--title-search-wrapper input {
+	font-size: 2em;
+}
+#irec--title-search-wrapper label+input {
+	margin-left: 0.25em;
+}
+
+.irec--subscription-selects .irec--comic-title-select option:disabled {
+	display: none;
+}

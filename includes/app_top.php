@@ -14,7 +14,7 @@ define('DEBUG_LVL', ($_SERVER['SERVER_NAME'] == 'localhost')?1:0);
 
 $irec_default_extensions = array(
 	//"common",
-	"subscription-search",
+	//"subscription-search",
 	"one-and-done"
 );
 

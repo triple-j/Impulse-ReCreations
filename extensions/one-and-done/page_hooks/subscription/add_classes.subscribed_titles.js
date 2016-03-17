@@ -8,8 +8,7 @@ IReC.page_hooks.subscription.add_classes.subscribed_titles = function( documentO
 
 	documentObject = documentObject || document;
 
-	//var elmsSelectOption = D.queryAll(".subscription-selects option", documentObject),
-	var elmsSelectOption = D.queryAll("select option", documentObject),
+	var elmsSelectOption = D.queryAll(".irec--comic-title-select option", documentObject),
 		subscriptionTitles = IReC.page_hooks.subscription.list_subscriptions();
 
 	D.forEach(elmsSelectOption, function(elm){
@@ -21,6 +20,7 @@ IReC.page_hooks.subscription.add_classes.subscribed_titles = function( documentO
 	});
 };
 
+//TODO: move to 'functions' file?
 IReC.page_hooks.subscription.list_subscriptions = function( documentObject ) {
 	"use strict";
 
