@@ -9,7 +9,8 @@
 
 	<!-- CSS -->
 	<stylesheet>styles/ui-fix.css</stylesheet>
-	<stylesheet>styles/pages/subscription/main.css</stylesheet>
+	<stylesheet>styles/pages/subscription/my_subscriptions.css</stylesheet>
+	<stylesheet>styles/pages/subscription/subscribed_titles.css</stylesheet>
 
 	<!-- TheD -->
 	<javascript>vendor/TheD/d.externalDOM.js</javascript>
@@ -29,6 +30,7 @@
 	<javascript>page_hooks/ALL_PAGES/add_classes.group_infoBoxes.js</javascript>
 	<javascript>page_hooks/subscription/execute.js</javascript>
 	<javascript>page_hooks/subscription/add_classes.my_subscriptions.js</javascript>
+	<javascript>page_hooks/subscription/add_classes.subscribed_titles.js</javascript>
 	<javascript>page_hooks/onload.js</javascript>
 
 </extension>
