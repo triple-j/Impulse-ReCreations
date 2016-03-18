@@ -6,15 +6,13 @@ if ( $irec_page != "/impulserecreations.user.js" ) {
 	unset($_SESSION['IREC_REQUEST']);
 }
 
-define('IREC_VERSION', "0.1.1b_".date('U'));
+define('IREC_VERSION', "0.2.0");
 
 define('DIR_EXTENSIONS', "extensions/");
 
 define('DEBUG_LVL', ($_SERVER['SERVER_NAME'] == 'localhost')?1:0);
 
 $irec_default_extensions = array(
-	//"common",
-	//"subscription-search",
 	"one-and-done"
 );
 

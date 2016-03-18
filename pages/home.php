@@ -6,7 +6,7 @@ $irec_selected_tab = "Home";
 ob_start();
 ?>
 
-	<h1>Impulse <em>Re</em>Creations<sup><small style="color:black">beta</small></sup></h1>
+	<h1>Impulse <em>Re</em>Creations</h1>
 	<p>Install the <a href="impulserecreations.user.js">User Script</a> to get the most out of <b>Impulse Creations</b>.
 		<br/><sup><small style="padding-left:1em;">(Current version: <?=IREC_VERSION;?>)</small></sup></p>
 	<p><small>Tested on Chrome and Firefox (Firefox requires
