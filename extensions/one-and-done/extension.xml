@@ -11,6 +11,7 @@
 	<stylesheet>styles/ui-fix.css</stylesheet>
 	<stylesheet>styles/ui-fix-description-popup.css</stylesheet>
 	<stylesheet>styles/pages/account/previous_orders.css</stylesheet>
+	<stylesheet>styles/pages/account_history/orders.css</stylesheet>
 	<stylesheet>styles/pages/subscription/my_subscriptions.css</stylesheet>
 	<stylesheet>styles/pages/subscription/selection_inputs.css</stylesheet>
 	<stylesheet>styles/pages/subscription/subscribed_titles.css</stylesheet>
@@ -23,6 +24,7 @@
 	<javascript>vendor/TheD/d.query.js</javascript>
 	<javascript>vendor/TheD/d.queryParent.js</javascript>
 	<javascript>vendor/TheD/d.queryText.js</javascript>
+	<javascript>vendor/TheD/d.wrapElement.js</javascript>
 
 	<!-- Base -->
 	<javascript>base/initialize.js</javascript>
@@ -35,6 +37,8 @@
 	<javascript>page_hooks/ALL_PAGES/add_classes.page_name.js</javascript>
 	<javascript>page_hooks/account/execute.js</javascript>
 	<javascript>page_hooks/account/add_classes.previous_orders.js</javascript>
+	<javascript>page_hooks/account_history/execute.js</javascript>
+	<javascript>page_hooks/account_history/add_classes.orders.js</javascript>
 	<javascript>page_hooks/subscription/execute.js</javascript>
 	<javascript>page_hooks/subscription/add_classes.my_subscriptions.js</javascript>
 	<javascript>page_hooks/subscription/add_classes.selection_inputs.js</javascript>

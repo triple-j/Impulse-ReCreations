@@ -1,5 +1,5 @@
 .irec--previous-orders tr:nth-child(odd) {
-	background-color: #cbcccc;
+	background-color: #eee;
 }
 
 .irec--previous-orders tr.moduleRowOver {

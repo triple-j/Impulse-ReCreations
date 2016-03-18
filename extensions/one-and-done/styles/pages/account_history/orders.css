@@ -1,0 +1,15 @@
+.irec--row--orders .irec--order:nth-child(6n+2),
+.irec--row--orders .irec--order:nth-child(6n+1) {
+	background-color: #eee;
+}
+
+.irec--row--orders .irec--row--spacer {
+	height: 0.5em;
+}
+.irec--row--orders .irec--row--spacer br {
+	display: none;
+}
+
+.irec--order span {
+	color: black;
+}
