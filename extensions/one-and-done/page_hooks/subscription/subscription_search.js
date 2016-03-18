@@ -56,7 +56,8 @@ window.IReC.page_hooks.subscription.subscription_search = window.IReC.page_hooks
 
 	ss.narrowTitles = function( query ) {
 		console.log(query);
-		var selIdx, optIdx, optionElmList;
+		var selIdx, optIdx, optionElmList,
+			classNoMatch = "irec--no-match";
 
 		for (selIdx = 0; selIdx < ss.titleSelectElmList.length; selIdx++) {
 			optionElmList = ss.titleSelectElmList[selIdx].querySelectorAll('option');
@@ -65,11 +66,16 @@ window.IReC.page_hooks.subscription.subscription_search = window.IReC.page_hooks
 				if (optionElmList[optIdx].textContent.toLowerCase().indexOf(query.toLowerCase()) === -1) {
 					optionElmList[optIdx].disabled = true;
 					optionElmList[optIdx].selected = false;
+					optionElmList[optIdx].classList.add(classNoMatch);
 				} else {
 					optionElmList[optIdx].disabled = false;
+					optionElmList[optIdx].classList.remove(classNoMatch);
 				}
 			}
 		}
+
+		// re-disable subscribed titles
+		IReC.page_hooks.subscription.add_classes.subscribed_titles(ss.documentObject);
 	};
 
 })(window.IReC.page_hooks.subscription.subscription_search);

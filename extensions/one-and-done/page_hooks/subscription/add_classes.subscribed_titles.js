@@ -16,6 +16,8 @@ IReC.page_hooks.subscription.add_classes.subscribed_titles = function( documentO
 
 		if ( subscriptionTitles.indexOf(text) !== -1 ) {
 			elm.classList.add("irec--subscribed");
+			elm.disabled = true;
+			elm.selected = false;
 		}
 	});
 };
